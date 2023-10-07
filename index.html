@@ -1,0 +1,25 @@
+<html>
+  <title>POST</title>
+  <body>
+    <script>
+      let data = { num: new URL(document.location).searchParams.get("num") };
+
+      let options = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      };
+
+      postData();
+
+      async function postData() {
+        const response = await fetch("https://nettle-held-tadpole.glitch.me/post", options);
+        const data = await response.json();
+        console.log(data);
+      }
+    </script>
+    Post
+  </body>
+</html>
