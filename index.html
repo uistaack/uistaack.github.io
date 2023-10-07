@@ -1,7 +1,7 @@
 <html>
   <title>POST</title>
   <body>
-        Post
+        Post/
 <button onclick="getData()">Get</button>
     <input type="text" id="inpt">
     <button onclick="postData()">POST</button>
@@ -9,7 +9,7 @@
     <script>
   let inpt = document.getElementById("inpt").value
              async function postData(){
-      const response = await fetch('https://nettle-held-tadpole.glitch.me/post/'+inpt);
+      const response = await fetch('https://nettle-held-tadpole.glitch.me/post/8');
       const data = await response.json();
 
       let np=data.content
